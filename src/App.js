@@ -7,8 +7,8 @@ import Modal from './components/Modal/Modal';
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXPlaying, setIsXPlaying] = useState(true);
-  const [xScore, setXScore] = useState(parseInt(localStorage.getItem('xScore')));
-  const [oScore, setOScore] = useState(parseInt(localStorage.getItem('oScore')));
+  const [xScore, setXScore] = useState(parseInt(localStorage.getItem('xScore')) || 0);
+  const [oScore, setOScore] = useState(parseInt(localStorage.getItem('oScore')) || 0);
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
